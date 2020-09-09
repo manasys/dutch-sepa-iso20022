@@ -75,6 +75,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+      <configuration>
+         <additionalparam>-Xdoclint:none</additionalparam>
+         <additionalOptions>-Xdoclint:none</additionalOptions>
+         <additionalJOption>-Xdoclint:none</additionalJOption>
+      </configuration>
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
@@ -82,6 +87,7 @@
 							<goal>jar</goal>
 						</goals>
 						<configuration>
+							<failOnWarning>false</failOnWarning>
 							<failOnError>false</failOnError>
 						</configuration>
 					</execution>
